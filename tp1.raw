@@ -1,0 +1,177 @@
+sage: def frobeniusNorm(M):
+...       show(M)
+...       n = M.nrows()
+...       p = M.ncols()
+...       s = 0
+...       for i in range(0,n):
+...           for j in range(0,p):
+...               square = abs(M[i,j])^2
+...               s += square
+...       r = sqrt(s)
+...       return r
+...
+sage: M = random_matrix(RDF,4)
+sage: frobeniusNorm(M)
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rrrr}
+-0.903063877787 & 0.330581204863 & 0.883830419827 & 0.970002296564 \\
+-0.463333811941 & 0.614013086106 & 0.291694761008 & 0.298458933866 \\
+0.159542469729 & 0.478550639335 & 0.734286097736 & -0.708490308612 \\
+0.433758656667 & 0.212996935328 & 0.736913163229 & -0.745291164268
+\end{array}\right)</script></html>
+2.4577095287832185
+sage: def transpose(M):
+...       n = M.nrows()
+...       p = M.ncols()
+...       R = matrix(RDF, p, n)
+...       for i in range(0,n):
+...           for j in range(0,p):
+...               R[j,i] = M[i,j]
+...       return R
+...
+sage: M = random_matrix(RDF,4,7)
+sage: show([M,transpose(M)])
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|U*x|\phantom{\verb!x!}\verb|-|\phantom{\verb!x!}\verb|B|\phantom{\verb!x!}\verb|=| \left(0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0,\,0\right)</script></html>
+sage: def random_trigonal(ring, size):
+...       R = random_matrix(ring, size)
+...       for i in range(0,size):
+...           for j in range(0,i+1):
+...               if i == j:
+...                   if R[i,j] == 0:
+...                       R[i,j] = 1
+...               else:
+...                   R[i,j] = 0
+...       return R
+...       
+...
+sage: def solveReducedSystem(domain,U,B):
+...       #show(U, B)
+...       n = U.nrows()
+...       x = vector(domain,n) # result
+...       for i in range(n - 1,-1,-1):
+...           line = U[i]
+...           bi = B[i]
+...           sumprod = line * x
+...           diagcoeff = line[i]
+...           xi = (bi - sumprod)/diagcoeff
+...           #show([line, bi, sumprod, diagcoeff, xi])
+...           x[i] = xi
+...       #show(U*x - B)
+...       return x
+...
+sage: errorTolerance = 1./100000.
+sage: def checkSolution(left, right, sol):
+...       diff = left*sol - right
+...       isok = diff.norm() <= errorTolerance
+...       return isok
+...       
+...
+sage: def test_solveReducedSystem(domain, size):
+...       U = random_trigonal(domain, size)
+...       B = random_vector(domain, size)
+...       x = solveReducedSystem(domain, U, B)
+...       uxmb = U*x - B
+...       isok = checkSolution(U, B, x)
+...       ans = "ok" if isok else "error"
+...       show("verif: " + ans)
+...       if not isok:
+...           show("U*x - B = ", uxmb, uxmb.norm())
+...
+sage: for i in range(10):
+...       test_solveReducedSystem(CDF,30)
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\verb|verif:|\phantom{\verb!x!}\verb|ok|</script></html>
+sage: def PivotSimple(A,b):
+...       U = copy(A)
+...       v = copy(b)
+...       n = A.nrows()
+...       for i in range(0, n-1): # ligne du pivot
+...           piv = U[i,i]
+...           if piv == 0:
+...               raise ValueError("pivot is null: divide by zero exception")
+...           invPiv = 1./piv
+...           digIn(U, v, n, i, invPiv)
+...       return (U, v)
+...
+sage: def digIn(U, v, n, i, invPiv):
+...       for k in range(i+1,n): # k-ieme ligne
+...           uki = U[k,i]
+...           factor = uki*invPiv
+...           for l in range(i+1,n): # l-ieme colonne
+...               ukl = U[k,l]
+...               uil = U[i,l]
+...               U[k,l] = ukl - factor*uil
+...           vk = v[k]
+...           vi = v[i]
+...           v[k] = vk - factor*vi
+...           for z in range(0, i+1): # z-ieme colonne, a nullifier de 0 a i
+...               U[k,z] = 0
+...
+sage: def test_PivotSimple(domain, size):
+...       A = random_matrix(domain, size)
+...       b = random_vector(domain, size)
+...       (U,v) = PivotSimple(A,b)
+...       #show(A, b)
+...       #show(U, v)
+...       x = solveReducedSystem(domain, U, v)
+...       isok = checkSolution(A, b, x)
+...       show(isok)
+...
+sage: for i in range(10):
+...       test_PivotSimple(CDF, i)
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+sage: from time import time
+sage: def test_gauss(n):
+...       A = random_matrix(CDF, n)
+...       b = random_vector(CDF, n)
+...       (U,v) = PivotSimple(A,b)
+...
+sage: def measureTime(todo, n, times):
+...       sum = 0
+...       for i in range(times):
+...           start = time()
+...           todo(n)
+...           end = time()
+...           timeSpent = end - start
+...           show(timeSpent)
+...       #return (n^3)/timeSpent
+...       # ........
+...       # fonction pas terminee
+...
+sage: measureTime(test_gauss, 10)
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0.00528788566589</script></html>
